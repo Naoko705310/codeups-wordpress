@@ -15,12 +15,14 @@
       <div>HOME > NEWS > Webデザインニュースサイト「ウェブマガジン」に取材いただきました</div>
     </div>
   </div>
-
+  <!-- メインループ -->
   <?php if (have_posts()): while (have_posts()): the_post(); ?>
+
   <!-- ループ処理開始 -->
   <section class="l-single-body p-single-body">
     <div class="p-single-body__inner l-inner">
       <div class="p-single-body__title">
+        <!-- タイトル -->
         <h1><?php the_title(); ?></h1>
       </div>
       <div class="p-single-body__meta">
@@ -46,21 +48,21 @@
         <div class="c-page-link__inner">
           <div class="c-page-link__flex">
             <!-- 前の記事を取得 -->
-            <?php 
+            <!-- <?php 
               $prev = get_previous_post();
               $prev_url = get_permalink($prev->ID);
               $next = get_next_post();
               $next_url = get_permalink($next->ID);
-            ?>
+            ?> -->
             <div class="c-page-link__prev">
-              <?php if($prev): ?>
+              <!-- <?php if($prev): ?> -->
               <a href="<?php echo $prev_url; ?>">前の記事</a>
-              <?php endif; ?>
+              <!-- <?php endif; ?> -->
             </div>
             <div class="c-page-link__next">
-              <?php if($next): ?>
+              <!-- <?php if($next): ?> -->
               <a href="<?php echo $next_url; ?>">次の記事</a>
-              <?php endif; ?>
+              <!-- <?php endif; ?> -->
             </div>
           </div>
           <div class="c-page-link__archive">
